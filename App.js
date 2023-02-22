@@ -17,10 +17,11 @@ export default function App() {
       </View>
       
       <View style={styles.button}>
-        Submit
+        <Text>Submit</Text>
       </View>
 
-      <StatusBar style="auto" />
+      <StatusBar barStyle="dark-content"/>
+      {/* status = "auto" */}
     </View>
   );
 }
