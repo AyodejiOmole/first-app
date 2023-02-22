@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Linking, StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   return (
@@ -16,9 +16,11 @@ export default function App() {
         <View style={styles.input}></View>
       </View>
       
-      <View style={styles.button}>
+      {/* <View style={styles.button}>
         <Text>Submit</Text>
-      </View>
+      </View> */}
+
+      <Button title="Submit" onPress={() => {Linking.openURL("https://www.youtube.com")}} style={styles.button}></Button>
 
       <StatusBar barStyle="dark-content"/>
       {/* status = "auto" */}
