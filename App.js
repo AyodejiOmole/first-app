@@ -1,29 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { Linking, StyleSheet, Text, View, Button } from 'react-native';
+import Login from './pages/Login';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.mainText}>Login</Text>
-
-      <View style={styles.detailView}>
-        <Text style={styles.subText}>Username</Text>
-        <View style={styles.input}></View>
-      </View>
-      
-      <View style={styles.detailView}>
-        <Text style={styles.subText}>Password</Text>
-        <View style={styles.input}></View>
-      </View>
-      
-      {/* <View style={styles.button}>
-        <Text>Submit</Text>
-      </View> */}
-
-      <Button title="Submit" onPress={() => {Linking.openURL("https://www.youtube.com")}} style={styles.button}></Button>
-
-      <StatusBar barStyle="dark-content"/>
-      {/* status = "auto" */}
+      <Login/>
     </View>
   );
 }
