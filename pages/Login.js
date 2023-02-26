@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { TextInput, TouchableOpacity, View, ToastAndroid, Alert, StatusBar, Text, StyleSheet } from 'react-native';
 
 export default function Login () {
+    const [pressed, setPressed] = useState(false);
 
     const handleSubmit = () => {
-        ToastAndroid.show("Login successful", ToastAndroid.LONG);
+      setPressed(!pressed);
+      ToastAndroid.show("Login successful", ToastAndroid.LONG);
         // ToastAndroid.show();
     } 
 
@@ -23,8 +25,8 @@ export default function Login () {
             </View>
             
             <View style={styles.bottom}>
-                <TouchableOpacity style={styles.button} onPress={handleSubmit} activeOpacity="0.6">
-                    <Text style={{color: "white"}}>Submit</Text>
+                <TouchableOpacity style={styles.button} onPress={handleSubmit} activeOpacity="0.6" disabled={pressed}>
+                    <Text style={{color: "white"}}>{!pressed ? "Login" : "Processing..."}</Text>
                 </TouchableOpacity>
             </View>
 

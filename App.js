@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { Linking, StyleSheet, Text, View, Button } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, View, StatusBar } from 'react-native';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Login/>
+      <StatusBar barStyle="dark-content"/>
+      {/* <Login/> */}
+      <SignUp/>
     </View>
   );
 }
@@ -16,45 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     paddingHorizontal: "20px",
-    paddingVertical: "20px",
+    paddingVertical: "10px",
   },
-
-  mainText: {
-    fontWeight: "800",
-    fontSize: "30px"
-  },
-
-  detailView: {
-    width: "100%",
-    marginVertical: "15px"
-  },
-
-  subText: {
-    fontWeight: "300",
-    opacity: "0.7",
-    display: "flex",
-    justifyContent: "flex-start"
-  },
-
-  button: {
-    width: "100%",
-    height: "50px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: "20px",
-    borderRadius: "10px",
-    color: "white",
-    fontWeight: "bold",
-    backgroundColor: "#212121",
-    cursor: "pointer"
-  },
-
-  input: {
-    borderWidth: "1px",
-    borderRadius: "5px",
-    width: "100%",
-    height: "50px",
-    marginVertical: "10px"
-  }
 });
